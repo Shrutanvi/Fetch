@@ -1,27 +1,32 @@
 # Fetch
 
-Offer Similarity Search Documentation
-Introduction
+# Offer Similarity Search Documentation
+
+# Introduction:
 This Python script performs offer similarity search based on user queries using TF-IDF vectorization and cosine similarity. It utilizes three dataframes - df_brand, df_cat, and df_off - which are merged to create a comprehensive dataset. The code then follows data cleaning steps and builds a model to search for offers and related information.
 
-Dependencies
+# Dependencies:
 pandas
 numpy
 scikit-learn
 Exploratory Data Analysis
 The script begins with exploratory data analysis (EDA) on the input datasets:
 
-df_brand
+df_brand:
 Loaded from 'brand_category.csv'
 Displayed first five rows and shape
 Checked for missing values
 Explored unique values and counts for 'BRAND' and 'BRAND_BELONGS_TO_CATEGORY'
-df_cat
+
+
+df_cat:
 Loaded from 'categories.csv'
 Displayed first five rows and shape
 Checked for missing values
 Explored unique values for 'PRODUCT_CATEGORY' and 'IS_CHILD_CATEGORY_TO'
-df_off
+
+
+df_off:
 Loaded from 'offer_retailer.csv'
 Displayed first five rows and shape
 Checked for missing values
@@ -33,12 +38,13 @@ Displayed merged dataframes and their shapes
 Data Cleaning
 The script proceeds with data cleaning steps on the merged dataframe (df_merged):
 
-Dropped columns 'CATEGORY_ID' and 'RECEIPTS'
+Dropped columns -  'CATEGORY_ID' and 'RECEIPTS'
 Dropped rows with missing values in the 'OFFER' column
 Cleaned special characters from the 'OFFER' column
 Filled remaining missing values with 'None'
 Displayed cleaned dataframe and its shape
-Model Creation
+
+# Model Creation:
 The script creates two models:
 
 Model 1: Searching for Offers
